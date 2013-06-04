@@ -7,7 +7,7 @@ class TestUsuario(TestCase):
         Este test se encarga de probar la adicion de un usuario al aplicativo web
         """
         usuario = User()
-        import pdb; pdb.set_trace()
+        #import pdb; pdb.set_trace()
         usuario.nombre = "cristian"
         usuario.nick = "fab48"
         usuario.correo = "fab7696650@hotmail.com"
@@ -15,7 +15,7 @@ class TestUsuario(TestCase):
         usuario.save()
 
         logeo = User.objects.filter(nick="fab48")
-        self.assertEqual(logeo[0].password, password)
+        self.assertEqual(logeo[0].password, "123456")
 
     def test_ingresar_lista(TestCase):
         """
