@@ -7,6 +7,6 @@ class User(models.Model):
     password = models.CharField(max_length=30)
 
 class Lista(models.Model):
-    pass
-
+    obj_usuario = models.ForeignKey(User)
+    url = models.CharField(max_length=100)
 
