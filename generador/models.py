@@ -1,7 +1,7 @@
 from django.db import models
 
 class User(models.Model):
-    pass
+    pass 
 
 class Lista(models.Model):
     pass
