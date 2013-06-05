@@ -2,8 +2,10 @@ from django.views.generic.edit import CreateView
 from django.http import HttpResponse
 from forms import UserForm
 from django.shortcuts import render
-from generador.models import Lista, User
+from generador.models import Lista
 from django.core.urlresolvers import reverse_lazy
+from django.contrib.auth.models import User
+
 
 def Home(request):
     diccionario={'estado1':'active'}
