@@ -8,9 +8,9 @@
         <div class="navbar-inner">
           <a class="brand">Lista</a>
           <ul class="nav">
-            <li class="{{ estado1 }}"><a>Inicio</a></li>
-            <li class="{{ estado2 }}"><a>Registrate</a></li>
-            <li class="{{ estado3 }}"><a>Ingresa</a></li>
+            <li class="{{ estado1 }}"><a href="{% url 'inicio' %}">Inicio</a></li>
+            <li class="{{ estado2 }}"><a href="{% url 'registro' %}">Registrate</a></li>
+            <li class="{{ estado3 }}"><a href="{% url 'ingreso' %}">Ingresa</a></li>
           </ul>
         </div>
       </div>
