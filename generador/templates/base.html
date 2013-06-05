@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+  </head>
+  <body>
+      <div class="navbar">
+        <div class="navbar-inner">
+          <a class="brand">Lista</a>
+          <ul class="nav">
+            <li class="{{ estado1 }}"><a>Inicio</a></li>
+            <li class="{{ estado2 }}"><a>Registrate</a></li>
+            <li class="{{ estado3 }}"><a>Ingresa</a></li>
+          </ul>
+        </div>
+      </div>
+    {% block contenido %}
+    {% endblock %}
+  </body>
+</html>
