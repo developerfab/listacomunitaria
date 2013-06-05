@@ -16,14 +16,8 @@ class TestUsuario(TestCase):
         Esta test se encarga de probar la insercion de url en las listas de
         reproduccion de cada usuario
         """
-        usuario = User()
+        usuario = User.objects.create_user('fab','fab7696650@hotmail.com','123')
         #import pdb; pdb.set_trace()
-        usuario.nombre = "cristian"
-        usuario.nick = "fab48"
-        usuario.correo = "fab7696650@hotmail.com"
-        usuario.password = "123456"
-        usuario.save()
-
         lista = Lista()
         lista.url = "http://www.youtube.com"
         lista.obj_usuario = usuario
