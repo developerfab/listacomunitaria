@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block contenido %}
+<div class="container">
+  <div class="row-fluid">
+    <div class="span5">
+        <form>
+            <div class="span5 btn btn-large btn-success">Generar lista abierta</div>
+            <div class="span5 btn btn-large btn-danger">Generar lista cerrada</div>
+        </form>
+    </div>
+    <div class="span5">
+      <form>
+        <label>Buscar por id:</label>
+        <input type="text" class="input-medium search-query">
+        <button type="submit" class="btn">Enviar</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
+

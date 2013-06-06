@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block contenido %}
+<form>
+  {% for valor in form %}
+    <div class="control-group {% if field.error %}error{% endif %}">
+      <label class="control-label">
+        {{ valor.label }}
+      </label>
+      <div class="controls">
+        {{ valor }}
+        <span class="help-inline">{{ field.errors }}</span>
+      </div>
+    </div>
+  {% endfor %}
+</form>
+{% endblock %}

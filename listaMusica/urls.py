@@ -1,10 +1,10 @@
 from django.conf.urls import patterns, include, url
-
-# Uncomment the next two lines to enable the admin:
-# from django.contrib import admin
-# admin.autodiscover()
+from generador.views import Home, Registro, Ingreso
 
 urlpatterns = patterns('',
+    url(r'^$',Home,name="inicio"),
+    url(r'^registro/$', Registro.as_view(), name="registro"),
+    url(r'^ingreso/$', Ingreso, name="ingreso"),
     # Examples:
     # url(r'^$', 'listaMusica.views.home', name='home'),
     # url(r'^listaMusica/', include('listaMusica.foo.urls')),
