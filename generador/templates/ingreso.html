@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block contenido %}
+<div class="container">
+<form method="post" action="{% url 'django.contrib.auth.views.login' %}">
+  {% for valor in form %}
+    <div class="control-group {% if valor.error %}El nombre de usuario o password no coindiden{% endif %}">
+      <label class="control-label">
+        {{ valor.label }}
+      </label>
+      <div class="controls">
+        {{ valor }}
+        <span class="help-inline">{{ field.errors }}</span>
+      </div>
+    </div>
+  {% endfor %}
+  {% csrf_token %}
+  <div class="control-group">
+    <div class="controls">
+      <button class="btn btn-danger" type="submit">Ingresar</button>
+    </div>
+  </div>
+</form>
+</div>
+{% endblock %}

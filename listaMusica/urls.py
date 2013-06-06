@@ -4,7 +4,7 @@ from generador.views import Home, Registro, Ingreso
 urlpatterns = patterns('',
     url(r'^$',Home,name="inicio"),
     url(r'^registro/$', Registro.as_view(), name="registro"),
-    url(r'^ingreso/$', Ingreso, name="ingreso"),
+    url(r'^ingreso/$', Ingreso.as_view(), name="ingreso"),
     # Examples:
     # url(r'^$', 'listaMusica.views.home', name='home'),
     # url(r'^listaMusica/', include('listaMusica.foo.urls')),

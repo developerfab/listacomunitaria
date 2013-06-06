@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
 {% block contenido %}
+<div class="container">
 <form>
   {% for valor in form %}
-    <div class="control-group {% if field.error %}error{% endif %}">
+    <div class="control-group {% if valor.error %}error{% endif %}">
       <label class="control-label">
         {{ valor.label }}
       </label>
@@ -12,5 +13,12 @@
       </div>
     </div>
   {% endfor %}
+  {% csrf_token%}
+  <div class="control-group">
+    <div class="controls">
+      <button class="btn btn-danger btn-large" type="submit">Enviar</button>
+    </div>
+  </div>
 </form>
+</div>
 {% endblock %}

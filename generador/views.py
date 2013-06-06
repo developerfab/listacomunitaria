@@ -1,6 +1,6 @@
 from django.views.generic.edit import CreateView
 from django.http import HttpResponse
-from forms import UserForm
+from forms import UserForm, IngresoForm
 from django.shortcuts import render
 from generador.models import Lista
 from django.core.urlresolvers import reverse_lazy
@@ -17,7 +17,7 @@ class Registro(CreateView):
     template_name = 'registro.html'
     success_url = reverse_lazy('inicio')
 
-def Ingreso(request):
+class Ingreso(CreateView):
     model = User
     form_class = IngresoForm
     template_name = 'ingreso.html'
