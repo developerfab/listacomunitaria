@@ -4,10 +4,10 @@
   {% for valor in form %}
     <div class="control-group {% if field.error %}error{% endif %}">
       <label class="control-label">
-        {{ field.label }}
+        {{ valor.label }}
       </label>
       <div class="controls">
-        {{ field }}
+        {{ valor }}
         <span class="help-inline">{{ field.errors }}</span>
       </div>
     </div>

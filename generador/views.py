@@ -18,4 +18,7 @@ class Registro(CreateView):
     success_url = reverse_lazy('inicio')
 
 def Ingreso(request):
-    pass
+    model = User
+    form_class = IngresoForm
+    template_name = 'ingreso.html'
+    success_url = reverse_lazy('logeo')
