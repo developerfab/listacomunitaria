@@ -22,3 +22,7 @@ class Ingreso(CreateView):
     form_class = IngresoForm
     template_name = 'ingreso.html'
     success_url = reverse_lazy('logeo')
+
+def Externo(request):
+    diccionario={'estado3':'active'}
+    return render(request,'externo.html',diccionario)

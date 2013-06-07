@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block contenido %}
 <div class="container">
-<form method="post" action="{% url 'django.contrib.auth.views.login' %}">
+<form method="post" >
   {% for valor in form %}
     <div class="control-group {% if valor.error %}El nombre de usuario o password no coindiden{% endif %}">
       <label class="control-label">
