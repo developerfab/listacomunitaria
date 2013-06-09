@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block contenido %}
 <div class="container">
-<form method="post" >
+<form method="post" action="/interno/">
   {% for valor in form %}
     <div class="control-group {% if valor.error %}El nombre de usuario o password no coindiden{% endif %}">
       <label class="control-label">
